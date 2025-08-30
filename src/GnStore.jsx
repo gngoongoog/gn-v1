@@ -20,7 +20,6 @@ const GnStore = () => {
 
   const productsPerPage = 50;
 
-  // ⚠️ استبدل YOUR_SHEET_ID بالرقم الحقيقي من رابط جدولك
   const GOOGLE_SHEET_CSV_URL =
     'https://docs.google.com/spreadsheets/d/1EGDXv8mRcwfUQfmoY4ReWL4ShqFii-BYV42iSIfxa1k/gviz/tq?tqx=out:csv';
 
@@ -49,7 +48,7 @@ const GnStore = () => {
             originalPrice: product.originalPrice ? parseInt(product.originalPrice) : undefined,
             rating: parseFloat(product.rating) || 4,
             reviews: parseInt(product.reviews) || 0,
-            image: product.image || 'https://via.placeholder.com/300',
+            image: product.image || 'https://via.placeholder.com/300', // ✅ تم إزالة المسافات
             category: product.category || 'اكسسوارات',
             discount: product.discount ? parseInt(product.discount) : undefined,
             bestseller: product.bestseller?.toLowerCase() === 'true',
@@ -106,6 +105,7 @@ const GnStore = () => {
     message += 'سأقوم بالتواصل معكم لتأكيد الطلب والتوصيل.\n\n';
     message += 'شكراً لاختياركم متجر Gn Store ❤️';
 
+    // ✅ تم إزالة المسافات الزائدة من الرابط
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank', 'noopener,noreferrer');
   };
