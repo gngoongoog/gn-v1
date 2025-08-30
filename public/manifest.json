@@ -5,7 +5,6 @@
   "display": "standalone",
   "background_color": "#1f2937",
   "theme_color": "#7c3aed",
-  "description": "متجر إلكتروني للإكسسوارات - شحن سريع، ضمان أصلي",
   "icons": [
     {
       "src": "/icon-192x192.png",
